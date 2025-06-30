@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combined Landing Page Examples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* General styles for the main page to separate the examples */
+    body {
+      background-color: #e9ebee;
+      font-family: Arial, sans-serif;
+    }
+    .section-container {
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      margin: 30px auto;
+      padding-top: 20px;
+      overflow: hidden; /* Contains the styling within the container */
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+    .section-title {
+      font-size: 1.5em;
+      text-align: center;
+      padding: 0 20px 20px 20px;
+      color: #333;
+      font-weight: bold;
+    }
+    hr {
+        display: none; /* Hide HR as we are using containers now */
+    }
+  </style>
+</head>
+<body>
+
+<div class="section-container">
+  <h2 class="section-title">1. Adult Dating, Cams, Nutra</h2>
+  <style>
+    /* Styles specific to section 1 */
+    #section1 { font-family: Arial; text-align: center; background-color: #000; color: #fff; padding: 30px; }
+    #section1 .box { background: #1c1c1c; padding: 20px; border-radius: 10px; display: inline-block; }
+    #section1 .btn { padding: 12px 20px; background: red; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; }
+    #section1 .btn:hover { background: darkred; }
+  </style>
+  <div id="section1">
+    <div class="box">
+      <h2>🔞 Age Verification</h2>
+      <p>You must be 18+ to view this content.</p>
+      <p>Click "I'm Over 18" to continue.</p>
+      <button class="btn" onclick="window.location.href='YOUR_AFFILIATE_LINK_HERE_1'">I'm Over 18</button>
+    </div>
+  </div>
+</div>
+
+<div class="section-container">
+  <h2 class="section-title">2. Dating/Hookup Offers, Webcam Sites</h2>
+  <style>
+    /* Styles specific to section 2 */
+    #section2 { background: #eee; font-family: sans-serif; text-align: center; padding: 40px; }
+    #section2 .chat { background: #fff; border-radius: 10px; padding: 20px; margin: 10px auto; max-width: 300px; border: 1px solid #ddd;}
+    #section2 .msg { background: #f1f1f1; padding: 10px; margin: 10px 0; border-radius: 5px; text-align: left; }
+    #section2 .btn { background: #28a745; color: white; padding: 12px 20px; font-size: 16px; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer;}
+    #section2 .btn:hover { background: #218838; }
+  </style>
+  <div id="section2">
+    <div class="chat">
+      <h2>💬 You Have 3 New Messages</h2>
+      <div class="msg">👩‍🦰 Amanda: "Are you in [Your City]? I’m nearby..."</div>
+      <div class="msg">👩‍🦱 Jessy: "I want to meet now. Click to chat!"</div>
+      <button class="btn" onclick="window.location.href='YOUR_AFFILIATE_LINK_HERE_2'">View Messages</button>
+    </div>
+  </div>
+</div>
+
+<div class="section-container">
+  <h2 class="section-title">3. Sweepstakes, Adult Games, CPA offers</h2>
+  <style>
+    /* Styles specific to section 3 */
+    #section3 { background: #111; color: #fff; font-family: sans-serif; text-align: center; padding: 40px; }
+    #section3 .timer { font-size: 28px; color: #ff0000; margin: 20px 0; font-weight: bold; }
+    #section3 .btn { background: #ff4500; color: white; padding: 14px 25px; font-size: 18px; border: none; border-radius: 8px; cursor: pointer; }
+    #section3 .btn:hover { background: #e63e00; }
+  </style>
+  <div id="section3">
+    <h2>🎁 Exclusive Adult Offer!</h2>
+    <p>You're selected for a premium offer. Time is running out!</p>
+    <div class="timer" id="countdown">00:10</div>
+    <button class="btn" onclick="window.location.href='YOUR_AFFILIATE_LINK_HERE_3'">Claim Now</button>
+  </div>
+</div>
+
+<script>
+  // JavaScript for the countdown timer in Section 3
+  (function() {
+    let timeLeft = 10;
+    const countdownElement = document.getElementById('countdown');
+    
+    // Check if the countdown element exists on the page to avoid errors
+    if (countdownElement) {
+      const interval = setInterval(() => {
+        timeLeft--;
+        countdownElement.innerText = `00:${timeLeft < 10 ? '0' : ''}${timeLeft}`;
+        
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          countdownElement.innerText = "Time's Up!";
+          // Optionally disable the button after time is up
+          // document.querySelector('#section3 .btn').disabled = true;
+        }
+      }, 1000);
+    }
+  })();
+</script>
+
+</body>
+</html>
